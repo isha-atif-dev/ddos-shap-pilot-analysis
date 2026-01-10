@@ -90,3 +90,27 @@ rf.fit(X_train, y_train)
 print("\nRandom Forest trained successfully")
 print("Train samples:", X_train.shape[0])
 print("Test samples:", X_test.shape[0])
+
+# -----------------------------
+# STEP 6: SHAP Explanations
+# -----------------------------
+
+import shap
+
+# Use TreeExplainer for Random Forest
+explainer = shap.TreeExplainer(rf)
+
+# Take a small sample for SHAP (pilot-friendly)
+X_sample = X_train.sample(1000, random_state=42)
+
+# Compute SHAP values
+shap_values = explainer.shap_values(X_sample)
+
+print("\nSHAP values computed")
+print("SHAP array type:", type(shap_values))
+
+
+# SHAP summary plot for attack class (binary/multiclass safe)
+
+
+shap.summary_plot(shap_values, X_sample)

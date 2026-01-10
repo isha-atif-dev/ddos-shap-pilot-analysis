@@ -32,3 +32,11 @@ df["target"] = df["Label"].apply(lambda x: 0 if x == "BENIGN" else 1)
 print("\nBinary class distribution:")
 print(df["target"].value_counts())
 
+# -----------------------------
+# STEP 3: Small pilot sample
+# -----------------------------
+
+pilot_df = df.sample(n=5000, random_state=42)
+
+print("\nPilot dataset shape:", pilot_df.shape)
+print(pilot_df["target"].value_counts())

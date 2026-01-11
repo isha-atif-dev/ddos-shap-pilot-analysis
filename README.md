@@ -10,15 +10,10 @@ Objectives of the Pilot Study
 The specific goals of this pilot analysis are to:
 
 Inspect the structure and dimensionality of a DDoS traffic dataset
-
 Examine the distribution of benign and attack traffic labels
-
 Perform basic preprocessing and binary label creation
-
 Prepare the groundwork for applying SHAP explanations to tree-based models
-
 Identify potential data quality or imbalance issues before full experimentation
-
 No final models or performance claims are made at this stage.
 
 Repository Structure
@@ -37,11 +32,9 @@ The raw DDoS dataset used in this pilot analysis is not included in the reposito
 The dataset can be obtained from publicly available intrusion detection datasets such as:
 
 CICIDS2017
-
 CIC-DDoS2019
 
 After downloading, place the dataset in the following location:
-
 data/ddos.csv
 
 Methodological Scope
@@ -49,29 +42,21 @@ Methodological Scope
 This repository focuses on:
 
 Exploratory data inspection
-
 Label analysis and preprocessing
-
 Explainability pipeline preparation
 
 It does not include:
 
 Final model training or optimisation
-
 Comparative algorithm evaluation
-
 Full SHAP stability experiments
-
 Those components are intentionally deferred to later stages of the research.
 
 Tools and Technologies
 
 Python
-
 pandas
-
 SHAP (planned integration)
-
 Tree-based machine learning models (planned)
 
 Status

@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
+import shap
 
 # Load dataset
 df = pd.read_csv("data/ddos.csv")
@@ -95,7 +96,6 @@ print("Test samples:", X_test.shape[0])
 # STEP 6: SHAP Explanations
 # -----------------------------
 
-import shap
 
 # Use TreeExplainer for Random Forest
 explainer = shap.TreeExplainer(rf)
